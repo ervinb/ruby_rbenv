@@ -24,6 +24,7 @@ git_url = node['rbenv']['git_url']
 git_ref = node['rbenv']['git_ref']
 rbenv_prefix = node['rbenv']['root_path']
 rbenv_plugins = node['rbenv']['plugins']
+user = node['rbenv']['user']
 
 install_rbenv_pkg_prereqs
 
@@ -42,4 +43,5 @@ install_or_upgrade_rbenv rbenv_prefix: rbenv_prefix,
                          git_url: git_url,
                          git_ref: git_ref,
                          upgrade_strategy: upgrade_strategy,
-                         rbenv_plugins: rbenv_plugins
+                         rbenv_plugins: rbenv_plugins,
+                         user: user
